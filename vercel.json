@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/manual", "destination": "https://milenar-manual.vercel.app/" },
+    { "source": "/manual/:path*", "destination": "https://milenar-manual.vercel.app/:path*" }
+  ]
+}
