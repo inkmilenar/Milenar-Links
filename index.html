@@ -1789,7 +1789,7 @@
     /* ========================================
        CELULAR (até 700px)
        Rodapé só com a frase, à esquerda, e a estrela, à direita;
-       textos em 15px, menos o título
+       textos em 15px, menos o título (48px) e os nomes das redes (12px)
     ========================================= */
 
     .footer-frase {
@@ -1826,10 +1826,13 @@
         margin-right: 12px;
       }
 
-      /* no celular, todos os textos em 15px (menos o título) */
-      .links-description,
-      .network-name {
+      /* no celular, textos em 15px (menos o título e os nomes das redes) */
+      .links-description {
         font-size: 15px;
+      }
+
+      .network-name {
+        font-size: 12px;
       }
 
     }
