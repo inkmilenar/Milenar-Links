@@ -462,6 +462,13 @@
 
     }
 
+    /* no toque (celular e tablet): o mesmo zoom ao tocar na foto */
+    .portrait-image-wrap.zm img {
+      transform:
+        scale(1.025)
+        translate(2px,-2px);
+    }
+
 
     /* ========================================
        TEXTO SOBRE
@@ -2969,6 +2976,23 @@
 
   </script>
 
+
+  <script>
+    /* Zoom da foto no toque: toca para aproximar, toca de novo (ou fora) para voltar */
+    (function () {
+      var foto = document.querySelector('.portrait-image-wrap');
+      if (!foto) return;
+      var tipo = 'mouse';
+      foto.addEventListener('pointerdown', function (e) { tipo = e.pointerType; });
+      foto.addEventListener('click', function () {
+        if (tipo === 'mouse') return;
+        foto.classList.toggle('zm');
+      });
+      document.addEventListener('click', function (e) {
+        if (!foto.contains(e.target)) foto.classList.remove('zm');
+      });
+    })();
+  </script>
 
 </body>
 
