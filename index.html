@@ -1865,12 +1865,30 @@
     }
 
     /* linha de baixo da grade de redes no computador e no tablet:
-       desenhada como fundo da própria grade (mesmo degradê da linha de cima),
-       porque a linha feita com ::after não aparecia no Safari */
+       um elemento próprio logo depois da grade, com o mesmo degradê da linha
+       de cima. A linha feita com ::after não aparecia no Safari. */
+    .social-grid-base {
+      display: none;
+    }
+
     @media
     (min-width: 701px) {
 
-      .social-grid {
+      .social-grid::after {
+        display: none;
+      }
+
+      .social-grid-base {
+        display: block;
+
+        position: relative;
+
+        z-index: 2;
+
+        height: 1px;
+
+        margin-top: -1px;
+
         background:
           linear-gradient(
             90deg,
@@ -1880,13 +1898,7 @@
             rgba(255,255,255,.22) 85%,
             rgba(255,255,255,.08) 95%,
             transparent 100%
-          )
-          left bottom / 100% 1px
-          no-repeat;
-      }
-
-      .social-grid::after {
-        display: none;
+          );
       }
 
     }
@@ -2339,6 +2351,8 @@
 
 
         </div>
+
+        <div class="social-grid-base" aria-hidden="true"></div>
 
       </div>
 
