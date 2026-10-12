@@ -1839,7 +1839,7 @@
 
     /* ========================================
        TAMANHOS DE TEXTO (todas as larguras)
-       Tudo em 15px, menos o título e os nomes das redes (11px)
+       Tudo em 15px, menos o título e os nomes das redes (11px; 10px no celular)
     ========================================= */
 
     .header-location,
@@ -1852,6 +1852,16 @@
 
     .network-name {
       font-size: 11px;
+    }
+
+    /* no celular, os nomes das redes ficam em 10px */
+    @media
+    (max-width: 700px) {
+
+      .network-name {
+        font-size: 10px;
+      }
+
     }
 
   </style>
