@@ -1063,13 +1063,19 @@
     }
 
     .footer-copy {
-      font-size: 17px;
+      font-size: 15px;
 
-      letter-spacing: .03em;
+      line-height: 1.5;
+
+      letter-spacing: normal;
 
       white-space: nowrap;
 
       flex-shrink: 1;
+    }
+
+    .footer-quebra {
+      display: none;
     }
 
     .footer-socials {
@@ -1643,13 +1649,17 @@
       }
 
       .footer-copy {
-        font-size: 11px;
+        font-size: 15px;
 
-        line-height: 1;
+        line-height: 1.5;
 
-        letter-spacing: 0;
+        letter-spacing: normal;
 
-        white-space: nowrap;
+        white-space: normal;
+      }
+
+      .footer-quebra {
+        display: inline;
       }
 
       .footer-socials {
@@ -1723,14 +1733,6 @@
         gap: 7px;
       }
 
-      .footer-copy {
-        font-size: 10px;
-
-        letter-spacing: -.01em;
-
-        white-space: nowrap;
-      }
-
       .footer-socials {
         gap: 10px;
       }
@@ -1790,19 +1792,6 @@
 
     }
 
-
-    /* ========================================
-       TELAS MUITO ESTREITAS (até 340px)
-    ========================================= */
-
-    @media
-    (max-width: 340px) {
-
-      .footer-copy {
-        font-size: 9px;
-      }
-
-    }
 
   </style>
 
@@ -2281,7 +2270,7 @@
 
 
     <div class="footer-copy">
-      © 2026 Milenar. Todos os direitos reservados.
+      © 2026 Milenar.<br class="footer-quebra"> Todos os direitos reservados.
     </div>
 
 
