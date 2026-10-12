@@ -462,7 +462,7 @@
 
     }
 
-    /* no toque (celular e tablet): o mesmo zoom ao tocar na foto */
+    /* no toque (celular e tablet): o mesmo zoom ao tocar na foto, que volta sozinho */
     .portrait-image-wrap.zm img {
       transform:
         scale(1.025)
@@ -2988,18 +2988,17 @@
 
 
   <script>
-    /* Zoom da foto no toque: toca para aproximar, toca de novo (ou fora) para voltar */
+    /* Zoom da foto no toque: a cada toque ela aproxima e volta sozinha (vai e volta) */
     (function () {
       var foto = document.querySelector('.portrait-image-wrap');
       if (!foto) return;
-      var tipo = 'mouse';
+      var tipo = 'mouse', espera = null;
       foto.addEventListener('pointerdown', function (e) { tipo = e.pointerType; });
       foto.addEventListener('click', function () {
         if (tipo === 'mouse') return;
-        foto.classList.toggle('zm');
-      });
-      document.addEventListener('click', function (e) {
-        if (!foto.contains(e.target)) foto.classList.remove('zm');
+        clearTimeout(espera);
+        foto.classList.add('zm');
+        espera = setTimeout(function () { foto.classList.remove('zm'); }, 1000);
       });
     })();
   </script>
