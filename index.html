@@ -1788,8 +1788,7 @@
 
     /* ========================================
        CELULAR (até 700px)
-       Rodapé só com a frase, à esquerda, e a estrela, à direita;
-       textos em 15px, menos o título (48px) e os nomes das redes (11px)
+       Rodapé só com a frase, à esquerda, e a estrela, à direita
     ========================================= */
 
     .footer-frase {
@@ -1826,40 +1825,24 @@
         margin-right: 12px;
       }
 
-      /* no celular, textos em 15px (menos o título e os nomes das redes) */
-      .links-description {
-        font-size: 15px;
-      }
-
-      .network-name {
-        font-size: 11px;
-      }
-
     }
 
 
     /* ========================================
-       TABLET (701px a 1000px)
-       Textos em 15px, menos o título (52px) e os nomes das redes (11px)
+       TAMANHOS DE TEXTO (todas as larguras)
+       Tudo em 15px, menos o título e os nomes das redes (11px)
     ========================================= */
 
-    @media
-    (min-width: 701px)
-    and
-    (max-width: 1000px) {
+    .header-location,
+    .intro-text p,
+    .links-description,
+    .typewriter-text,
+    .footer-copy {
+      font-size: 15px;
+    }
 
-      .header-location,
-      .intro-text p,
-      .links-description,
-      .typewriter-text,
-      .footer-copy {
-        font-size: 15px;
-      }
-
-      .network-name {
-        font-size: 11px;
-      }
-
+    .network-name {
+      font-size: 11px;
     }
 
   </style>
