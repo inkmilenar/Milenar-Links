@@ -1787,8 +1787,9 @@
 
 
     /* ========================================
-       RODAPÉ NO CELULAR (até 700px)
-       Só a frase, à esquerda, e a estrela, à direita
+       CELULAR (até 700px)
+       Rodapé só com a frase, à esquerda, e a estrela, à direita;
+       textos em 15px, menos o título
     ========================================= */
 
     .footer-frase {
@@ -1823,6 +1824,12 @@
       /* estrela um pouco afastada da borda direita */
       .footer-socials {
         margin-right: 12px;
+      }
+
+      /* no celular, todos os textos em 15px (menos o título) */
+      .links-description,
+      .network-name {
+        font-size: 15px;
       }
 
     }
