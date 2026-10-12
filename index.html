@@ -1864,6 +1864,33 @@
 
     }
 
+    /* linha de baixo da grade de redes no computador e no tablet:
+       desenhada como fundo da própria grade (mesmo degradê da linha de cima),
+       porque a linha feita com ::after não aparecia no Safari */
+    @media
+    (min-width: 701px) {
+
+      .social-grid {
+        background:
+          linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255,255,255,.08) 5%,
+            rgba(255,255,255,.22) 15%,
+            rgba(255,255,255,.22) 85%,
+            rgba(255,255,255,.08) 95%,
+            transparent 100%
+          )
+          left bottom / 100% 1px
+          no-repeat;
+      }
+
+      .social-grid::after {
+        display: none;
+      }
+
+    }
+
     /* ícones do rodapé: espaço visível igual (22px) entre os desenhos.
        A estrela e o Instagram são desenhos mais estreitos que a caixa de 19px,
        então se aproximam um pouco do vizinho da esquerda. */
