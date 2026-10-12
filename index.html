@@ -1074,10 +1074,6 @@
       flex-shrink: 1;
     }
 
-    .footer-quebra {
-      display: none;
-    }
-
     .footer-socials {
       display: flex;
 
@@ -1658,10 +1654,6 @@
         white-space: normal;
       }
 
-      .footer-quebra {
-        display: inline;
-      }
-
       .footer-socials {
         flex-shrink: 0;
 
@@ -1792,6 +1784,41 @@
 
     }
 
+
+
+    /* ========================================
+       RODAPÉ NO CELULAR (até 700px)
+       Frase em cima, à esquerda; ícones embaixo, à direita
+    ========================================= */
+
+    .footer-frase {
+      white-space: nowrap;
+    }
+
+    @media
+    (max-width: 700px) {
+
+      .footer {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: center;
+
+        gap: 16px;
+
+        padding: 24px 0;
+      }
+
+      .footer-copy {
+        text-align: left;
+      }
+
+      .footer-socials {
+        align-self: flex-end;
+      }
+
+    }
 
   </style>
 
@@ -2270,7 +2297,7 @@
 
 
     <div class="footer-copy">
-      © 2026 Milenar.<br class="footer-quebra"> Todos os direitos reservados.
+      <span class="footer-frase">© 2026 Milenar.</span> <span class="footer-frase">Todos os direitos reservados.</span>
     </div>
 
 
