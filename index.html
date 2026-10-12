@@ -149,7 +149,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;500&family=Libre+Caslon+Display&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@300;400&family=Raleway:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
@@ -183,10 +183,13 @@
       color: var(--text);
 
       font-family:
-        "IBM Plex Sans Condensed",
+        Raleway,
         sans-serif;
 
       font-weight: 300;
+
+      font-variant-numeric:
+        lining-nums;
 
       overflow-x: clip;
 
@@ -321,7 +324,7 @@
 
     .header-location {
       font-family:
-        "IBM Plex Sans Condensed",
+        Raleway,
         sans-serif;
 
       font-size: 15px;
@@ -468,18 +471,18 @@
       max-width: 650px;
 
       font-family:
-        "Libre Caslon Display",
+        "Cormorant Garamond",
         Georgia,
         serif;
 
       font-size:
         clamp(52px,4.8vw,82px);
 
-      font-weight: 400;
+      font-weight: 300;
 
       line-height: .93;
 
-      letter-spacing: -.035em;
+      letter-spacing: -.01em;
 
       margin-bottom: 30px;
     }
@@ -504,7 +507,7 @@
 
     .intro-text p {
       font-family:
-        "IBM Plex Sans Condensed",
+        Raleway,
         sans-serif;
 
       font-size: 15px;
@@ -519,6 +522,9 @@
 
       text-justify:
         inter-word;
+
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
     .intro-text p:last-child {
@@ -942,7 +948,7 @@
       width: 100%;
 
       font-family:
-        "IBM Plex Sans Condensed",
+        Raleway,
         sans-serif;
 
       font-size: 20px;
@@ -1775,6 +1781,20 @@
 
       .typewriter-cursor {
         display: none;
+      }
+
+    }
+
+
+    /* ========================================
+       TELAS MUITO ESTREITAS (até 340px)
+    ========================================= */
+
+    @media
+    (max-width: 340px) {
+
+      .footer-copy {
+        font-size: 9px;
       }
 
     }
