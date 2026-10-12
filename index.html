@@ -1788,7 +1788,7 @@
 
     /* ========================================
        RODAPÉ NO CELULAR (até 700px)
-       Frase em cima, à esquerda; ícones embaixo, centralizados
+       Só a frase, à esquerda, e a estrela, à direita
     ========================================= */
 
     .footer-frase {
@@ -1799,13 +1799,13 @@
     (max-width: 700px) {
 
       .footer {
-        flex-direction: column;
+        flex-direction: row;
 
-        align-items: stretch;
+        align-items: center;
 
-        justify-content: center;
+        justify-content: space-between;
 
-        gap: 16px;
+        gap: 24px;
 
         padding: 24px 0;
       }
@@ -1814,8 +1814,10 @@
         text-align: left;
       }
 
-      .footer-socials {
-        align-self: center;
+      .footer-social.instagram,
+      .footer-social.youtube,
+      .footer-social.whatsapp {
+        display: none;
       }
 
     }
